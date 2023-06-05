@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agregar Empleado</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/agregar.js"></script>
+
+</head>
+
+<style>
+    body {
+                background-color: #9e9595; /* Color de fondo en formato hexadecimal */
+    }
+</style>
+<body>
+  <h2>Agregar Empleado</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required><br><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="text" id="email" name="email" required><br><br>
+
+    <label for="telefono">Número de teléfono:</label>
+    <input type="number" id="telefono" name="telefono" required><br><br>
+
+    <label for="telefono">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required><br><br>
+
+    <button class="btn btn-primary">Agregar Empleado</button>
+    <button class="btn btn-secondary">Inicio</button>
+
+</body>
+</html>
