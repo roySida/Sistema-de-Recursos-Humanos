@@ -4,13 +4,13 @@ const user = express.Router()
 const db = require('../config/database')
 
 user.post("/signin", async (req, res, next) =>{
-    const {user_name, user_mail, user_password} = req.body
-    if(user_name && user_mail && user_password){
-        const query = `INSERT INTO user (user_name, user_mail, user_password) VALUES ('${user_name}', '${user_mail}', '${user_password}')`
+    const {user_nombre, user_correo, user_contraseña} = req.body
+    if(user_nombre && user_correo && user_contraseña){
+        const query = `INSERT INTO administradores (nombre, correo, contraseña) VALUES ('${user_nombre}', '${user_correo}', '${user_contraseña}')`
         const rows = await db.query(query)
     
         if(rows.affectedRows == 1){
-            return res.status(201).json({code: 201, message: "Usuario registrado correctamente"})
+            return res.status(201).json({code: 201, message: "Administrador registrado correctamente"})
         }
         return res.status(500).json({code: 500, message: "Ocurrio un error"})
     }
