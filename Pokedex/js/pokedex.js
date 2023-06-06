@@ -63,8 +63,8 @@ function displayEmpleados(empleados){
                            <td>${empleados[i].telefono}</td>
                            <td>${empleados[i].correo}</td>
                            <td>${empleados[i].direccion}</td>
-                           <td><button class="btn btn-primary" id = "" value="${empleados[i].correo}">Editar</button></td>
-                           <td><button class="btn btn-primary" id = "" value="${empleados[i].correo}">Eliminar</button></td>`
+                           <td><button onclick="localStorage.setItem('correo', '${empleados[i].correo}'); window.location.href = 'Modificar2.html'">Editar</button></td>
+                           <td><button onclick="localStorage.setItem('correo', '${empleados[i].correo}'); window.location.href = 'Eliminar2.html'">Eliminar</button></td>`
     }
     body.innerHTML += `</tr>`
 }

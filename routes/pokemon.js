@@ -27,13 +27,13 @@ pokemon.delete("/:id([0-9]{1,3})", async (req, res, next) => {
     return res.status(404).json({code: 404, message: "Pokemon no encontrado"})
 })
 
-pokemon.put("/:id([0-9]{1,3})", async (req, res, next) => {
-    const {pok_name, pok_height, pok_weight, pok_base_experience} = req.body
-    if(pok_name && pok_height && pok_weight && pok_base_experience){
-        let query = `UPDATE pokemon SET pok_name = '${pok_name}', pok_height = ${pok_height}, pok_weight = ${pok_weight}, pok_base_experience = ${pok_base_experience} WHERE pok_id = ${req.params.id};`
+pokemon.put("/", async (req, res, next) => {
+    const {user_nombre, user_apellido, user_telefono, user_correo, user_direccion} = req.body
+    if(user_nombre && user_apellido && user_telefono && user_correo, user_direccion){
+        let query = `UPDATE empleados SET nombre = '${user_nombre}', apellido = '${user_apellido}', telefono = ${user_telefono}, correo = '${user_correo}', direccion = '${user_direccion}' WHERE correo = '${user_correo}';`
         const rows = await db.query(query)
         if (rows.affectedRows == 1){
-            return res.status(200).json({code: 200, message: "Pokemon actualizado correctamente"})
+            return res.status(200).json({code: 200, message: "Empleado actualizado correctamente"})
         }
         return res.status(500).json({code: 500, message: "Ocurrio un error"})
     }
@@ -56,6 +56,13 @@ pokemon.patch("/:id([0-9]{1,3})", async (req, res, next) => {
 pokemon.get("/", async (req, res, next) => {
     const pkmn = await db.query("SELECT * FROM empleados")
     return res.status(200).json({code: 200, message: pkmn})
+})
+
+pokemon.get("/email/:correo", async (req, res, next) => {
+    const correo = req.params.correo
+    const pkmn = await db.query("SELECT * FROM empleados WHERE correo = '" + correo + "';")
+
+    return (pkmn.length > 0) ? res.status(200).json({code: 200, message: pkmn}) : res.status(404).json({code: 404, message: "Empleado no encontrado"})
 })
 
 pokemon.get("/:id([0-9]{1,3})", async (req, res, next) => {
