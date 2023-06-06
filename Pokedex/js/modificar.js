@@ -14,7 +14,6 @@ function init(){
 
         document.querySelector('.btn-secondary').addEventListener('click', function(){
             window.location.href = "Inicio2.html"
-            update
         })
 
         document.querySelector('.btn-primary').addEventListener('click', update)

@@ -19,39 +19,27 @@
     }
 </style>
 <body>
-    <h1>Eliminar Empleado</h1>
-    
-    <form action="eliminar_usuario.php" method="POST">
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required><br><br>
-        
-        <p>¿Estás seguro de que deseas eliminar este empleado?</p>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <h1>Eliminar Empleado</h1>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6 offset-3">
+                <div class="form-group">
+                        
+                        <p>¿Estás seguro de que deseas eliminar este empleado?</p>
 
-        <table>
-            <tr>
-                <th>Nombre </th>
-                <th>Apellido </th>
-                <th>Email </th>
-                <th>Telefono </th>
-                <th>Direccion </th>
+                        <table border = "1" class="form-group">
+                            
+                        </table>
 
-            </tr>
-            <tr>
-                <td>Roy</td>
-                <td>Sida</td>
-                <td>casteroy@example.com</td>
-                <td>4426027067</td>
-                <td>Direccion</td>
-
-
-                <td></td>
-            </tr>
-        </table>
-
-        
-        <input type="submit" value="Eliminar">
-        <button onclick="window.location.href='Inicio.html'">Cancelar</button>
-
-    </form>
+                        
+                        <button class="btn btn-primary">Eliminar</button>
+                        <button class="btn btn-secondary">Cancelar</button>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
