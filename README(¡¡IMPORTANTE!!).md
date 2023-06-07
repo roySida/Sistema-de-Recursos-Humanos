@@ -12,3 +12,5 @@ Los pasos para poder hacer prueba de la aplicacion son los siguientes:
 7. En la carpeta Pokedex del proyecto, localice el archivo "PaginaInicial2.hmtl" y abralo en su navegador favorito 
 8. A partir de ahora puede navegar por la aplicacion, en la carpeta del proyecto se encuentra el archivo "Manual de Usuario Node.js.pdf"
    este puede servirle de guia para recorrer las distintas interfaces del programa 
+   
+NOTA: Los usuarios necesarios para realizar el inicio de sesion se encuentran en la tabla "Administradores" en la base de datos 
